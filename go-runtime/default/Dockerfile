@@ -9,7 +9,7 @@ ENV https_proxy http://192.168.20.1:10809
 #RUN tar -xzf code-server-3.10.2-linux-amd64.tar.gz
 
 ADD code-server-3.10.2-linux-amd64.tar.gz /usr/local/code-server/
-
+ENV code_server /usr/local/code-server/code-server-3.10.2-linux-amd64
 # https://github.com/cdr/code-server/releases/tag/v3.10.2
 
 # 添加go 语言插件
@@ -22,7 +22,7 @@ RUN ${code_server}/bin/code-server --install-extension /root/golang.Go-0.26.0.vs
 ADD https://marketplace.visualstudio.com/_apis/public/gallery/publishers/formulahendry/vsextensions/code-runner/0.11.5/vspackage /root/
 RUN ${code_server}/bin/code-server --install-extension /root/formulahendry.code-runner.0.11.5.vsix
 
-ENV code_server /usr/local/code-server/code-server-3.10.2-linux-amd64
+
 
 
 RUN /usr/local/go/bin/go get -v github.com/uudashr/gopkgs/v2/cmd/gopkgs
