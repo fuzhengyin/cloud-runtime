@@ -8,6 +8,7 @@ ENV https_proxy http://192.168.20.1:10809
 #WORKDIR /usr/local/code-server
 #RUN tar -xzf code-server-3.10.2-linux-amd64.tar.gz
 
+# 这个需要事先下载好，上面会重新下载
 ADD code-server-3.10.2-linux-amd64.tar.gz /usr/local/code-server/
 ENV code_server /usr/local/code-server/code-server-3.10.2-linux-amd64
 # https://github.com/cdr/code-server/releases/tag/v3.10.2

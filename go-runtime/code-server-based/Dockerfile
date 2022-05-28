@@ -1,4 +1,5 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.04 
+#与default 中的不同，default中的继续go-lang的镜像。
 
 #ADD https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-linux-amd64.tar.gz /usr/local/code-server/
 #WORKDIR /usr/local/code-server/
